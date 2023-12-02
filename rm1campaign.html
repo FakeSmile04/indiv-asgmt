@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM1 Campaign</title>
+    <link href="rm1campaign.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="picture1" src="logo-IIUM-ori.png" alt="IIUM logo" width="400px" height="100px" />
+        <img class="picture2" src="donate.svg" alt="RM1 Campaign" width="100px" height="100px" />
+    </header>
+    <div class="intro">
+        <h1>RM1 CAMPAIGN PROGRAM</h1>
+        <h2>Let your contributions be</h2>
+        <strong>PERPETUAL</strong>
+        <h2>for the pleasure of Allah swt</h2>
+        <p id="verse">“The example of those who spend their wealth in the way of Allah is like a seed [of grain] which
+            grows seven
+            spikes; in each spike is a hundred grains. And Allah multiplies [His reward] for whom He wills. And Allah is
+            all-Encompassing and Knowing.”
+            Al Baqarah:261</p>
+    </div>
+    <main>
+        <h3>Monthly Salary Deduction Form</h3>
+        <form class="form" method="post">
+            <p class="form">Required fields are marked by <span class="form" aria-label="required">*</span>.</p>
+            <div class="form">
+                <fieldset class="question">
+                    <legend class="form">Name</legend>
+                    <span class="question" aria-label="required">* </span><input class="form textbox" type="text"
+                        name="username" required />
+                </fieldset>
+            </div>
+            <div  class="form">
+                <fieldset class="question">
+                    <legend class="form">Staff No.</legend>
+                    <span class="question" aria-label="required">* </span><input class="form textbox" type="text"
+                        name="staffno" pattern="[0-9]{1,4}" required />
+                </fieldset>
+            </div>
+            <div class="form">
+                <fieldset class="question">
+                    <legend class="form">K/C/D/I/O</legend>
+                    <span class="question" aria-label="required">* </span><textarea class="form textbox" name="kcdio"
+                        rows="4" required></textarea>
+                </fieldset>
+            </div>
+            <div class="form">
+                <fieldset class="question">
+                    <legend class="form">Contact No.</legend>
+                    <span class="question" aria-label="required">* </span><input class="form textbox" type="text"
+                        name="contactno" pattern="[0-9]{10,11}" required />
+                </fieldset>
+            </div>
+            <div class="form">
+                <fieldset class="question">
+                    <legend class="form">Email</legend>
+                    <span class="question" aria-label="required">* </span><input class="form textbox" type="email"
+                        name="email" required />
+                </fieldset>
+            </div>
+            <div class="form">
+                <fieldset class="question">
+                    <legend class="form">Amount to be Deducted(RM)</legend>
+                    <span class="question" aria-label="required">* </span><input class="form textbox" type="text"
+                        name="amount" required />
+                </fieldset>
+            </div>
+            <div class="form">
+                <fieldset class="question">
+                    <legend class="form">Deduction Period</legend>
+                    <p>
+                        <span class="question" aria-label="required">* </span><input class="form" type="month"
+                            name="periodstart" required />
+                    Until
+                        <span class="question" aria-label="required">* </span><input class="form" type="month"
+                            name="periodend" required />
+                    </p>
+                </fieldset>
+            </div>
+            <div id="kulliyyah-based" class="form">
+                <fieldset class="question">
+                    <legend class="form">Kulliyyah-based donation?</legend>
+                    <label>
+                        <input id="box" onclick="showKulliyyahs()" value="Yes" class="form" type="checkbox" name="kul-donate-true" />
+                        Yes
+                    </label>
+                </fieldset>
+                <!--dropdown menu for Kulliyyah selection-->
+                <!--
+                <fieldset id="kul">
+                    <legend class="form">Select Kulliyyah</legend>
+                    <select class="form" name="Kulliyyah">
+                        <option value="kict">Kulliyyah of Information and Communication and Technology(KICT)</option>
+                        <option value="irk">AbdulHamid AbuSulayman Kulliyyah of Islamic Revealed Knowledge and Human Sciences(KIRKHS)</option>
+                        <option value="koe">Kulliyyah of Engineering (KOE)</option>
+                        <option value="kaed">Kulliyyah of Architecture and Environmental Design (KAED) </option>
+                        <option value="kenms">Kulliyyah of Economics and Management Sciences (KENMS)</option>
+                        <option value="koed">Kulliyyah of Education (KOED)</option>
+                        <option value="aikol">Ahmad Ibrahim Kulliyyah of Law (AIKOL)</option>
+                        <option value="celpad">Center for Languages & Pre-University Academic Development(CELPAD)</option>
+                    </select>
+                </fieldset>
+                -->
+                <fieldset id="kul">
+                    <legend class="form">Select Kulliyyah</legend>
+                    <select class="form" name="Kulliyyah">
+                        <option value="kict">KICT</option>
+                        <option value="irk">KIRKHS</option>
+                        <option value="koe">KOE</option>
+                        <option value="kaed">KAED</option>
+                        <option value="kenms">KENMS</option>
+                        <option value="koed">KOED</option>
+                        <option value="aikol">AIKOL</option>
+                        <option value="celpad">CELPAD</option>
+                    </select>
+                </fieldset>
+            </div>
+            <p class="form button">
+                <button type="submit">Submit</button>
+            </p>
+
+        </form>
+    </main>
+    <script src="rm1campaign.js"></script>
+    <footer>
+        <p class="footer" id="orgName">IIUM ENDOWMENT FUND</p>
+        <p class="footer">Level 3, Rectory</p>
+        <p class="footer">International Islamic University Malaysia</p>
+        <p class="footer">P.O. Box 10</p>
+        <p class="footer">50728 Kuala Lumpur</p>
+        <p class="footer">Tel: 03 6196 4268</p>
+        <p class="footer"><img src="email.svg" /> <a class="footer" href="ief@iium.edu.my"
+                title="IEF Email">ief@iium.edu.my</a></p>
+        <p class="footer"><img src="web.svg"> <a class="footer" href="www.iium.edu.my/ief"
+                title="IEF Website">www.iium.edu.my/ief</a></p>
+        <p class="footer"><img src="facebook.png" width="20px" height="20px" /> <a class="footer"
+                href="www.facebook.com/ief.official/" title="IEF Facebook">www.facebook.com/ief.official</a></p>
+    </footer>
+</body>
+
+</html>
